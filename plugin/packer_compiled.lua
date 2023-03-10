@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\bad4i\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["tabnine-nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\bad4i\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tabnine-nvim",
+    url = "https://github.com/codota/tabnine-nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "C:\\Users\\bad4i\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
