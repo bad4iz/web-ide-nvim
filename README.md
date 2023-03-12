@@ -4,6 +4,6 @@
 
 ## Installing Windows
 ```bash
-git https://github.com/bad4iz/web-ide-nvim $env:LOCALAPPDATA\nvim
+git clone https://github.com/bad4iz/web-ide-nvim $env:LOCALAPPDATA\nvim
 nvim
 ```
