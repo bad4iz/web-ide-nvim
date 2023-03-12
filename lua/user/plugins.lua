@@ -45,7 +45,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs"  -- A super powerful autopair plugin for Neovim that supports multiple characters.
-
+  use "numToStr/Comment.nvim" -- // Comment.nvim
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -88,6 +88,8 @@ return packer.startup(function(use)
   }
   use "p00f/nvim-ts-rainbow"
   use "nvim-treesitter/playground"
+  use "JoosepAlviste/nvim-ts-context-commentstring" -- A Neovim plugin for setting the commentstring option based on the cursor location in the file. The location is checked via treesitter queries.
+  
 
   -- Test
   use 'vim-test/vim-test'
