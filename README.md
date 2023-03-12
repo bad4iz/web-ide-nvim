@@ -7,3 +7,6 @@
 git clone https://github.com/bad4iz/web-ide-nvim $env:LOCALAPPDATA\nvim
 nvim
 ```
+
+
+test - https://github.com/vim-test/vim-test
