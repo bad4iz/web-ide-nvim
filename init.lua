@@ -8,3 +8,5 @@ require "user.telescope"
 require "user.tabnine"
 require "user.treesitter"
 require "user.vim-test"
+require "user.autopairs"
+
