@@ -11,4 +11,5 @@ require "user.vim-test"
 require "user.autopairs"
 require "user.comment"
 require "user.gitsigns"
+require "user.nvim-tree"
 
