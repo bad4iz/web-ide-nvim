@@ -46,6 +46,9 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs"  -- A super powerful autopair plugin for Neovim that supports multiple characters.
   use "numToStr/Comment.nvim" -- // Comment.nvim
+  use "nvim-tree/nvim-web-devicons"
+  use "nvim-tree/nvim-tree.lua"
+
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
