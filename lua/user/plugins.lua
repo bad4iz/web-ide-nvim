@@ -48,7 +48,8 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim" -- // Comment.nvim
   use "nvim-tree/nvim-web-devicons"
   use "nvim-tree/nvim-tree.lua"
-
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out

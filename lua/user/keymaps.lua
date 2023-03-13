@@ -40,7 +40,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Save
 keymap("n", "<c-s>", ":w!<CR>", opts)
-keymap("i", "<c-s>", ":w!<CR>", opts)
+keymap("i", "<c-s>", "<ESC>:w!<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter

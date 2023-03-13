@@ -59,9 +59,6 @@ nvim_tree.setup {
         number = false,
         relativenumber = false,
     },
-    actions = {
-        quit_on_open = true,
-    },
     renderer = {
         highlight_git = true,
         root_folder_modifier = ":t",
