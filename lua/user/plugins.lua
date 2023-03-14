@@ -42,16 +42,16 @@ packer.init {
 return packer.startup(function(use)
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/popup.nvim"    -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/plenary.nvim"  -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs"  -- A super powerful autopair plugin for Neovim that supports multiple characters.
-  use "numToStr/Comment.nvim" -- // Comment.nvim
+  use "numToStr/Comment.nvim"  -- // Comment.nvim
   use "nvim-tree/nvim-web-devicons"
   use "nvim-tree/nvim-tree.lua"
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
- use "akinsho/toggleterm.nvim"
-
+  use "akinsho/toggleterm.nvim"
+  use "folke/which-key.nvim" 
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -59,10 +59,10 @@ return packer.startup(function(use)
   use 'folke/tokyonight.nvim'
 
   -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
-  use "hrsh7th/cmp-buffer" -- buffer completions
-  use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "hrsh7th/nvim-cmp"         -- The completion plugin
+  use "hrsh7th/cmp-buffer"       -- buffer completions
+  use "hrsh7th/cmp-path"         -- path completions
+  use "hrsh7th/cmp-cmdline"      -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
@@ -70,15 +70,15 @@ return packer.startup(function(use)
 
 
   -- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
+  use "L3MON4D3/LuaSnip"             --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
 
   -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/mason.nvim" -- simple to use language server installer
+  use "neovim/nvim-lspconfig"             -- enable LSP
+  use "williamboman/mason.nvim"           -- simple to use language server installer
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
-  use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions
+  use 'jose-elias-alvarez/null-ls.nvim'   -- LSP diagnostics and code actions
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -101,7 +101,7 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
--- Automatically set up your configuration after cloning packer.nvim
+  -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
     require("packer").sync()
