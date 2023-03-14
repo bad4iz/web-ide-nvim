@@ -72,12 +72,11 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
 
-    -- LSP
+  -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/mason.nvim" -- simple to use language server installer
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
   use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions
-
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -93,14 +92,13 @@ return packer.startup(function(use)
   use "p00f/nvim-ts-rainbow"
   use "nvim-treesitter/playground"
   use "JoosepAlviste/nvim-ts-context-commentstring" -- A Neovim plugin for setting the commentstring option based on the cursor location in the file. The location is checked via treesitter queries.
-  
 
   -- Test
   use 'vim-test/vim-test'
 
   -- Git
   use "lewis6991/gitsigns.nvim"
-  
+
 -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
