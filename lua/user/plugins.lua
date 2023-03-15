@@ -51,8 +51,8 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "akinsho/toggleterm.nvim"
-  use "folke/which-key.nvim" 
-
+  use "folke/which-key.nvim"
+  use 'nvim-lualine/lualine.nvim'
 
   use 'goolord/alpha-nvim'
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
