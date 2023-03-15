@@ -53,6 +53,10 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "folke/which-key.nvim" 
 
+
+  use 'goolord/alpha-nvim'
+  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
+
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   -- use "lunarvim/darkplus.nvim"
