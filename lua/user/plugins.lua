@@ -53,7 +53,6 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "folke/which-key.nvim"
   use 'nvim-lualine/lualine.nvim'
-  use "terryma/vim-expand-region" -- extend selection . how ctrl + w in ide
 
   use 'goolord/alpha-nvim'
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
@@ -73,6 +72,9 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
 
+  -- editing
+  use('willothy/moveline', { run = 'make' }) -- Moveline can be installed using any Neovim package manager that supports build commands.
+  use "terryma/vim-expand-region" -- extend selection . how ctrl + w in ide
 
 
   -- snippets
