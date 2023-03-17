@@ -368,9 +368,14 @@ local vopts = {
 local vmappings = {
   ["/"] = { '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', "Comment" },
   s = { "<esc><cmd>'<,'>SnipRun<cr>", "Run range" },
+  ["+"] = {'<Plug>(expand_region_expand)', 'выделение блока'},
+  ["-"] = {'<Plug>(expand_region_shrink)', 'Снятие выделение блока'},
   -- z = { "<cmd>TZNarrow<cr>", "Narrow" },
 }
 
+-- выделение текста
+-- keymap("n", "<c-w>", "", opts)
+-- keymap("v", "<c-W>", "<Plug>(expand_region_expand)", opts)
 which_key.setup(setup)
 which_key.register(mappings, opts)
 which_key.register(vmappings, vopts)
