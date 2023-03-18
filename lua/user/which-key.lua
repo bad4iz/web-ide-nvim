@@ -380,3 +380,20 @@ which_key.setup(setup)
 which_key.register(mappings, opts)
 which_key.register(vmappings, vopts)
 which_key.register(m_mappings, m_opts)
+
+
+
+which_key.register({
+  {
+ a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+
+  }
+}, {
+  mode = "n", -- VISUAL mode
+  prefix = "A",
+  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true, -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = true, -- use `nowait` when creating keymaps
+}
+)

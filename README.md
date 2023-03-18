@@ -10,4 +10,8 @@ nvim
 
 ### Переключение языка `Ctrl` + `6`
 
+
+- multicursor [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
+
+
 test - https://github.com/vim-test/vim-test
