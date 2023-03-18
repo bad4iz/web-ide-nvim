@@ -74,6 +74,7 @@ return packer.startup(function(use)
 
   -- editing
   use "terryma/vim-expand-region" -- extend selection . how ctrl + w in ide
+  -- use "terryma/vim-multiple-cursors" -- multicursor
   use "willothy/moveline.nvim" -- move line and block
   use {'mg979/vim-visual-multi', branch = 'master'}
 
