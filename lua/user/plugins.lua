@@ -1,7 +1,7 @@
 local fn = vim.fn
 
 -- Automatically install packer
-local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+local install_path = fn.stdpath "datauuuu" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system {
     "git",
@@ -73,9 +73,10 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lua"
 
   -- editing
-  use('willothy/moveline', { run = 'make' }) -- Moveline can be installed using any Neovim package manager that supports build commands.
+  -- use {'willothy/moveline',  run = 'make' }
   use "terryma/vim-expand-region" -- extend selection . how ctrl + w in ide
-
+  use 'terryma/vim-multiple-cursors' -- multicursor
+  use   'willothy/moveline.nvim' -- move line and block
 
   -- snippets
   use "L3MON4D3/LuaSnip"             --snippet engine
