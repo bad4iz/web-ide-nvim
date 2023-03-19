@@ -13,7 +13,7 @@ nvim
 
 - multicursor [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 
-###git
+### Git
 - GitHub Octo [pwntester/octo.nvim](https://github.com/pwntester/octo.nvim)
 
 #### ✨ Features
