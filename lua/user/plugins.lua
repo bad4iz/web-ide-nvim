@@ -119,6 +119,15 @@ return packer.startup(function(use)
     },
 
   }
+  -- JsDoc Anotation
+  use {
+    "danymat/neogen",
+    requires = "nvim-treesitter/nvim-treesitter",
+    -- Uncomment next line if you want to follow only stable versions
+    -- tag = "*"
+  }
+
+
 
 
   -- Automatically set up your configuration after cloning packer.nvim
