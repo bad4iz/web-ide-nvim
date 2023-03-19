@@ -12,6 +12,16 @@ nvim
 
 
 - multicursor [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
+###git
+- GitHub Octo [pwntester/octo.nvim](https://github.com/pwntester/octo.nvim)
+#### ✨ Features
+- Edit GitHub issues and PRs
+- Add/Modify/Delete comments
+- Add/Remove label, reactions, assignees, project cards, reviewers, etc.
+- Add Review PRs
+#### ⚡️Requirements
+- Install [GitHub CLI](https://cli.github.com/)
+
 
 
 test - https://github.com/vim-test/vim-test
