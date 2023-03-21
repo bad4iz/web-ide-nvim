@@ -77,7 +77,7 @@ return packer.startup(function(use)
   -- use "terryma/vim-multiple-cursors" -- multicursor
   use "willothy/moveline.nvim"    -- move line and block
   use { 'mg979/vim-visual-multi', branch = 'master' }
-
+  use 'sQVe/sort.nvim'
 
   -- snippets
   use "L3MON4D3/LuaSnip"             --snippet engine
