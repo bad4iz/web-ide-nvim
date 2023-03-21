@@ -9,22 +9,22 @@ vim.o.timeoutlen = 100
 
 local setup = {
   plugins = {
-    marks = true, -- shows a list of your marks on ' and `
-    registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
+    marks = true,       -- shows a list of your marks on ' and `
+    registers = true,   -- shows your registers on " in NORMAL or <C-r> in INSERT mode
     spelling = {
-      enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
+      enabled = true,   -- enabling this will show WhichKey when pressing z= to select spelling suggestions
       suggestions = 20, -- how many suggestions should be shown in the list?
     },
     -- the presets plugin, adds help for a bunch of default keybindings in Neovim
     -- No actual key bindings are created
     presets = {
-      operators = false, -- adds help for operators like d, y, ... and registers them for motion / text object completion
-      motions = false, -- adds help for motions
+      operators = false,    -- adds help for operators like d, y, ... and registers them for motion / text object completion
+      motions = false,      -- adds help for motions
       text_objects = false, -- help for text objects triggered after entering an operator
-      windows = true, -- default bindings on <c-w>
-      nav = true, -- misc bindings to work with windows
-      z = true, -- bindings for folds, spelling and others prefixed with z
-      g = true, -- bindings for prefixed with g
+      windows = true,       -- default bindings on <c-w>
+      nav = true,           -- misc bindings to work with windows
+      z = true,             -- bindings for folds, spelling and others prefixed with z
+      g = true,             -- bindings for prefixed with g
     },
   },
   -- add operators that will trigger motion and text object completion
@@ -41,27 +41,27 @@ local setup = {
   icons = {
     breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
     separator = "➜", -- symbol used between a key and it's label
-    group = "+", -- symbol prepended to a group
+    group = "+",      -- symbol prepended to a group
   },
   popup_mappings = {
     scroll_down = "<c-d>", -- binding to scroll down inside the popup
-    scroll_up = "<c-u>", -- binding to scroll up inside the popup
+    scroll_up = "<c-u>",   -- binding to scroll up inside the popup
   },
   window = {
-    border = "rounded", -- none, single, double, shadow
-    position = "bottom", -- bottom, top
-    margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
+    border = "rounded",       -- none, single, double, shadow
+    position = "bottom",      -- bottom, top
+    margin = { 1, 0, 1, 0 },  -- extra window margin [top, right, bottom, left]
     padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
     winblend = 0,
   },
   layout = {
     height = { min = 4, max = 25 }, -- min and max height of the columns
     width = { min = 20, max = 50 }, -- min and max width of the columns
-    spacing = 3, -- spacing between columns
-    align = "center", -- align columns left, center or right
+    spacing = 3,                    -- spacing between columns
+    align = "center",               -- align columns left, center or right
   },
   -- ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
-  hidden = { "<silent>", "<cmd>", "<Cmd>",  "call", "lua", "^:" }, -- hide mapping boilerplate
+  hidden = {},       -- hide mapping boilerplate
   show_help = false, -- show help message on the command line when the popup is visible
   -- triggers = "auto", -- automatically setup triggers
   -- triggers = {"<leader>"} -- or specify a list manually
@@ -75,21 +75,21 @@ local setup = {
 }
 
 local opts = {
-  mode = "n", -- NORMAL mode
+  mode = "n",     -- NORMAL mode
   prefix = "<leader>",
-  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-  silent = true, -- use `silent` when creating keymaps
+  buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true,  -- use `silent` when creating keymaps
   noremap = true, -- use `noremap` when creating keymaps
-  nowait = true, -- use `nowait` when creating keymaps
+  nowait = true,  -- use `nowait` when creating keymaps
 }
 
 local m_opts = {
-  mode = "n", -- NORMAL mode
+  mode = "n",     -- NORMAL mode
   prefix = "m",
-  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-  silent = true, -- use `silent` when creating keymaps
+  buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true,  -- use `silent` when creating keymaps
   noremap = true, -- use `noremap` when creating keymaps
-  nowait = true, -- use `nowait` when creating keymaps
+  nowait = true,  -- use `nowait` when creating keymaps
 }
 
 local m_mappings = {
@@ -125,7 +125,6 @@ local mappings = {
   ["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
   -- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-
   -- :lua require'lir.float'.toggle()
   -- ["f"] = {
   --   "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -136,7 +135,6 @@ local mappings = {
   -- ["R"] = { '<cmd>lua require("renamer").rename()<cr>', "Rename" },
   -- ["z"] = { "<cmd>ZenMode<cr>", "Zen" },
   ["gy"] = "Link",
-
   B = {
     name = "Browse",
     i = { "<cmd>BrowseInputSearch<cr>", "Input Search" },
@@ -145,7 +143,6 @@ local mappings = {
     f = { "<cmd>BrowseDevdocsFiletypeSearch<cr>", "Devdocs Filetype" },
     m = { "<cmd>BrowseMdnSearch<cr>", "Mdn" },
   },
-
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -154,7 +151,6 @@ local mappings = {
     S = { "<cmd>PackerStatus<cr>", "Status" },
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
-
   o = {
     name = "Options",
     c = { '<cmd>lua vim.g.cmp_active=false<cr>', "Completion off" },
@@ -164,9 +160,7 @@ local mappings = {
     l = { '<cmd>lua require("user.functions").toggle_option("cursorline")<cr>', "Cursorline" },
     s = { '<cmd>lua require("user.functions").toggle_option("spell")<cr>', "Spell" },
     t = { '<cmd>lua require("user.functions").toggle_tabline()<cr>', "Tabline" },
-
   },
-
   -- s = {
   --   name = "Split",
   --   s = { "<cmd>split<cr>", "HSplit" },
@@ -185,14 +179,12 @@ local mappings = {
     -- a = { ":RestoreSessionFromFile<cr>", "test" },
     -- a = { ":DeleteSession<cr>", "test" },
   },
-
   r = {
     name = "Replace",
     r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
     w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
     f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
   },
-
   d = {
     name = "Debug",
     b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },
@@ -205,7 +197,6 @@ local mappings = {
     u = { "<cmd>lua require'dapui'.toggle()<cr>", "UI" },
     x = { "<cmd>lua require'dap'.terminate()<cr>", "Exit" },
   },
-
   -- nnoremap <silent> <leader>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
   -- nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
   -- require("dapui").open()
@@ -229,7 +220,6 @@ local mappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
-
   g = {
     name = "Git",
     g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
@@ -261,7 +251,6 @@ local mappings = {
       p = { "<cmd>Gist -b -p<cr>", "Create Private" },
     },
   },
-
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
@@ -331,7 +320,6 @@ local mappings = {
     t = { "<cmd>SnipRunToggle<cr>", "Toggle" },
     x = { "<cmd>SnipTerminate<cr>", "Terminate" },
   },
-
   t = {
     name = "Terminal",
     ["1"] = { ":1ToggleTerm<cr>", "1" },
@@ -346,14 +334,12 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
-
   T = {
     name = "Treesitter",
     h = { "<cmd>TSHighlightCapturesUnderCursor<cr>", "Highlight" },
     p = { "<cmd>TSPlaygroundToggle<cr>", "Playground" },
     r = { "<cmd>TSToggle rainbow<cr>", "Rainbow" },
   },
-
   -- z = {
   --   name = "Zen",
   --   z = { "<cmd>TZAtaraxis<cr>", "Zen" },
@@ -364,18 +350,18 @@ local mappings = {
 }
 
 local vopts = {
-  mode = "v", -- VISUAL mode
+  mode = "v",     -- VISUAL mode
   prefix = "<leader>",
-  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-  silent = true, -- use `silent` when creating keymaps
+  buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true,  -- use `silent` when creating keymaps
   noremap = true, -- use `noremap` when creating keymaps
-  nowait = true, -- use `nowait` when creating keymaps
+  nowait = true,  -- use `nowait` when creating keymaps
 }
 local vmappings = {
   ["/"] = { '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', "Comment" },
   s = { "<esc><cmd>'<,'>SnipRun<cr>", "Run range" },
-  ["+"] = {'<Plug>(expand_region_expand)', 'выделение блока'},
-  ["-"] = {'<Plug>(expand_region_shrink)', 'Снятие выделение блока'},
+  ["+"] = { '<Plug>(expand_region_expand)', 'выделение блока' },
+  ["-"] = { '<Plug>(expand_region_shrink)', 'Снятие выделение блока' },
   -- z = { "<cmd>TZNarrow<cr>", "Narrow" },
 }
 
@@ -387,3 +373,33 @@ which_key.register(mappings, opts)
 which_key.register(vmappings, vopts)
 which_key.register(m_mappings, m_opts)
 
+
+which_key.register({
+  g = {
+    name = "Go",
+    s = {
+      { '<Esc><Cmd>Sort<CR>', 'Sorting' }
+    }
+  },
+}, {
+  mode = "v",     -- VISUAL mode
+  buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true,  -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = true,  -- use `nowait` when creating keymaps
+})
+
+which_key.register({
+  g = {
+    name = "Go",
+    s = {
+      { ':Sort<CR>', 'Sorting' }
+    }
+  },
+}, {
+  mode = "n",     -- VISUAL mode
+  buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true,  -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = true,  -- use `nowait` when creating keymaps
+})
