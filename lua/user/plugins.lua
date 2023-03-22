@@ -1,5 +1,5 @@
 local fn = vim.fn
-
+ 
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -123,12 +123,11 @@ return packer.startup(function(use)
   use {
     "danymat/neogen",
     requires = "nvim-treesitter/nvim-treesitter",
-    -- Uncomment next line if you want to follow only stable versions
-    -- tag = "*"
   }
 
 
 
+  use 'wakatime/vim-wakatime' -- time tracker
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
