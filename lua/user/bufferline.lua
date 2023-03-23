@@ -13,9 +13,8 @@ bufferline.setup {
     -- NOTE: this plugin is designed with this icon in mind,
     -- and so changing this is NOT recommended, this is intended
     -- as an escape hatch for people who cannot bear it for whatever reason
-    indicator={
-      icon = "▎"
-    },
+	indicator_icon = nil,
+    indicator = { style = "icon", icon = "▎"},
     buffer_close_icon = "",
     -- buffer_close_icon = '',
     modified_icon = "●",
@@ -84,8 +83,8 @@ bufferline.setup {
     },
 
     -- buffer_selected = {
-    --   guifg = {attribute='fg',highlight='#ff0000'},
-    --   guibg = {attribute='bg',highlight='#0000ff'},
+    --   fg = {attribute='fg',highlight='#ff0000'},
+    --   bg = {attribute='bg',highlight='#0000ff'},
     --   gui = 'none'
     --   },
     buffer_visible = {
@@ -102,8 +101,8 @@ bufferline.setup {
       bg = { attribute = "bg", highlight = "TabLine" },
     },
     -- close_button_selected = {
-    --   guifg = {attribute='fg',highlight='TabLineSel'},
-    --   guibg ={attribute='bg',highlight='TabLineSel'}
+    --   fg = {attribute='fg',highlight='TabLineSel'},
+    --   bg ={attribute='bg',highlight='TabLineSel'}
     --   },
 
     tab_selected = {
@@ -115,7 +114,7 @@ bufferline.setup {
       bg = { attribute = "bg", highlight = "TabLine" },
     },
     tab_close = {
-      -- guifg = {attribute='fg',highlight='LspDiagnosticsDefaultError'},
+      -- fg = {attribute='fg',highlight='LspDiagnosticsDefaultError'},
       fg = { attribute = "fg", highlight = "TabLineSel" },
       bg = { attribute = "bg", highlight = "Normal" },
     },
@@ -123,17 +122,17 @@ bufferline.setup {
     duplicate_selected = {
       fg = { attribute = "fg", highlight = "TabLineSel" },
       bg = { attribute = "bg", highlight = "TabLineSel" },
-      ui = "italic",
+      underline = true,
     },
     duplicate_visible = {
       fg = { attribute = "fg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
-      ui = "italic",
+      underline = true,
     },
     duplicate = {
       fg = { attribute = "fg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
-      ui = "italic",
+      underline = true,
     },
 
     modified = {
@@ -158,8 +157,8 @@ bufferline.setup {
       bg = { attribute = "bg", highlight = "Normal" },
     },
     -- separator_visible = {
-    --   guifg = {attribute='bg',highlight='TabLine'},
-    --   guibg = {attribute='bg',highlight='TabLine'}
+    --   fg = {attribute='bg',highlight='TabLine'},
+    --   bg = {attribute='bg',highlight='TabLine'}
     --   },
     indicator_selected = {
       fg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },

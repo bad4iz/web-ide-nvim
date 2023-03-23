@@ -54,8 +54,10 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use 'nvim-lualine/lualine.nvim'
 
+  use "lukas-reineke/indent-blankline.nvim" -- Этот плагин добавляет направляющие отступов ко всем строкам (включая пустые строки).
+  use "lewis6991/impatient.nvim"            -- Этот плагин делает несколько вещей для ускорения загрузки модулей и файлов Lua.
+  use "ahmedkhalf/project.nvim"
   use 'goolord/alpha-nvim'
-  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -89,6 +91,7 @@ return packer.startup(function(use)
   use "williamboman/mason.nvim"           -- simple to use language server installer
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
   use 'jose-elias-alvarez/null-ls.nvim'   -- LSP diagnostics and code actions
+  use "RRethy/vim-illuminate"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -102,7 +105,6 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "p00f/nvim-ts-rainbow"
-  use "nvim-treesitter/playground"
   use "JoosepAlviste/nvim-ts-context-commentstring" -- A Neovim plugin for setting the commentstring option based on the cursor location in the file. The location is checked via treesitter queries.
 
   -- Test
@@ -119,6 +121,7 @@ return packer.startup(function(use)
     },
 
   }
+
   -- JsDoc Anotation
   use {
     "danymat/neogen",
