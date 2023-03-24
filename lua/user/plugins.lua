@@ -80,6 +80,7 @@ return packer.startup(function(use)
   use "willothy/moveline.nvim"    -- move line and block
   use { 'mg979/vim-visual-multi', branch = 'master' }
   use 'sQVe/sort.nvim'
+use "mbbill/undotree"
 
   -- snippets
   use "L3MON4D3/LuaSnip"             --snippet engine
