@@ -402,6 +402,9 @@ which_key.register({
     },
     e = {
       "<CMD>!eslint --fix %<CR>", "Eslint format curent file"
+    },
+    h = {
+      "<CMD>UndotreeToggle<CR>", "History"
     }
   },
 }, {
