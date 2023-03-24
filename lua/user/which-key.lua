@@ -379,7 +379,8 @@ which_key.register({
     name = "Go",
     s = {
       { '<Esc><Cmd>Sort<CR>', 'Sorting' }
-    }
+    },
+  
   },
 }, {
   mode = "v",     -- VISUAL mode
@@ -389,15 +390,22 @@ which_key.register({
   nowait = true,  -- use `nowait` when creating keymaps
 })
 
+------------------------------------------------------------------------------
+-------------------------   NORMAL MODE   ------------------------------------
+------------------------------------------------------------------------------
+
 which_key.register({
   g = {
     name = "Go",
     s = {
       { ':Sort<CR>', 'Sorting' }
+    },
+    e = {
+      "<CMD>!eslint --fix %<CR>", "Eslint format curent file"
     }
   },
 }, {
-  mode = "n",     -- VISUAL mode
+  mode = "n",     -- NORMAL mode
   buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
   silent = true,  -- use `silent` when creating keymaps
   noremap = true, -- use `noremap` when creating keymaps
