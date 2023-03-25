@@ -1,5 +1,5 @@
 local fn = vim.fn
- 
+
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -75,16 +75,16 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lua"
 
   -- editing
-  use "terryma/vim-expand-region" -- extend selection . how ctrl + w in ide
+  use "terryma/vim-expand-region"               -- extend selection . how ctrl + w in ide
   -- use "terryma/vim-multiple-cursors" -- multicursor
-  use "willothy/moveline.nvim"    -- move line and block
   use { 'mg979/vim-visual-multi', branch = 'master' }
   use 'sQVe/sort.nvim'
-use "mbbill/undotree"
+  use "mbbill/undotree"
 
   -- snippets
   use "L3MON4D3/LuaSnip"             --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+  use "mattn/emmet-vim"              -- emmet
 
 
   -- LSP
@@ -109,8 +109,8 @@ use "mbbill/undotree"
   use "JoosepAlviste/nvim-ts-context-commentstring" -- A Neovim plugin for setting the commentstring option based on the cursor location in the file. The location is checked via treesitter queries.
 
   -- Test
-  use 'vim-test/vim-test'
-
+  -- use 'vim-test/vim-test'
+  --
   -- Git
   use "lewis6991/gitsigns.nvim"
   use {

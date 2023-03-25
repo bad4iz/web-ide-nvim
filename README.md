@@ -11,6 +11,10 @@ nvim
 ### Переключение языка `Ctrl` + `6`
 
 
+### Emmet
+[mattn/emmet-vim](https://github.com/mattn/emmet-vim)
+`ctrl + y`
+
 - multicursor [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 
 ### Git
@@ -22,7 +26,7 @@ nvim
 - Add/Modify/Delete comments
 - Add/Remove label, reactions, assignees, project cards, reviewers, etc.
 - Add Review PRs
-#### ⚡️Requirements
+#### ⚡️Requirement
 
 - Install [GitHub CLI](https://cli.github.com/)
 
