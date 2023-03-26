@@ -9,7 +9,7 @@ nvim
 ```
 
 ### Переключение языка `Ctrl` + `6`
-
+### intellisense       `Ctrl + g`
 
 ### Emmet
 [mattn/emmet-vim](https://github.com/mattn/emmet-vim)
