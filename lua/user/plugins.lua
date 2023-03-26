@@ -67,12 +67,16 @@ return packer.startup(function(use)
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp"         -- The completion plugin
+  use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-buffer"       -- buffer completions
   use "hrsh7th/cmp-path"         -- path completions
   use "hrsh7th/cmp-cmdline"      -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
-  use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
+  -- snippets
+  use "L3MON4D3/LuaSnip"             --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+  use "mattn/emmet-vim"              -- emmet
 
   -- editing
   use "terryma/vim-expand-region"               -- extend selection . how ctrl + w in ide
@@ -80,11 +84,6 @@ return packer.startup(function(use)
   use { 'mg979/vim-visual-multi', branch = 'master' }
   use 'sQVe/sort.nvim'
   use "mbbill/undotree"
-
-  -- snippets
-  use "L3MON4D3/LuaSnip"             --snippet engine
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-  use "mattn/emmet-vim"              -- emmet
 
 
   -- LSP
