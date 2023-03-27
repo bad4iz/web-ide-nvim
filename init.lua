@@ -1,3 +1,6 @@
+require "user.keymaps"
+require "user.which-key"
+
 require "user.alpha"
 require "user.autocommands"
 require "user.autopairs"
@@ -7,7 +10,7 @@ require "user.comment"
 require "user.gitsigns"
 require "user.impatient"
 require "user.indentline"
-require "user.keymaps"
+
 require "user.lsp"
 require "user.lualine"
 require "user.neogen"
@@ -21,5 +24,6 @@ require "user.telescope"
 require "user.toggleterm"
 require "user.treesitter"
 require "user.vim-test"
-require "user.which-key"
+
+
 require "user.bufferline"
