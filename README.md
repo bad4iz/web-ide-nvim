@@ -7,7 +7,11 @@
 git clone https://github.com/bad4iz/web-ide-nvim $env:LOCALAPPDATA\nvim
 nvim
 ```
-
+## linux
+```bash
+git clone https://github.com/bad4iz/web-ide-nvim ~/.config/nvim
+nvim
+```
 ### Переключение языка `Ctrl` + `6`
 ### intellisense       `Ctrl + g`
 
