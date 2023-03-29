@@ -55,6 +55,8 @@ local plugins = {
  "akinsho/bufferline.nvim",
  "moll/vim-bbye",
 
+ -- multi cursor  
+ {'mg979/vim-visual-multi', branch = 'master'},
 
 
 
